@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Station</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="js/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/jspdf.umd.min.js"></script>
+    <script src="js/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Assetz Tracker</h2>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="furniture.html"><i class="fas fa-chair"></i> Furniture</a></li>
+                <li><a href="vehicles.html"><i class="fas fa-car"></i> Vehicles</a></li>
+                <li><a href="equipment.html"><i class="fas fa-desktop"></i> Office Equipment</a></li>
+                <li><a href="otherassets.html"><i class="fas fa-cubes"></i> Other Assets</a></li>
+                <li><a href="help.html"><i class="fas fa-question-circle"></i> Help</a></li>
+
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <h1> Stations</h1>
+                
+            </header>
+
+            <section class="form-section">
+                <h1>Add Stations</h1>
+                <form id="stationForm">
+                    <h2>Add New Station</h2>
+                    <div class="form-group">
+                        <label for="station-name">Station Name *</label>
+                        <input type="text" id="station-name" placeholder="Enter station name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="station-location">Station Location *</label>
+                        <input type="text" id="station-location" placeholder="Enter station location" required>
+                    </div>
+                    
+
+                    <button type="submit" class="btn">Save Station</button>
+                    <button class="btn" onclick="window.location.href='view-station.html'">View Station</button>
+                    
+                </form>
+            </section>
+            
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
+
+            

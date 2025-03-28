@@ -1,0 +1,602 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.container h1{
+
+    margin-top: 18px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #555;
+    text-align: center;
+}
+
+.sidebar {
+    width: 145px;
+    height:100%;
+    background-color: #284b63;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:fixed;
+    z-index: 100;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar ul li {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #d9d9d9;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    font-size: 45px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a :hover{
+    color: #7a9e9f;
+}
+
+.sidebar ul li a span {
+    font-size: 12px;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left:170px;
+    padding-right:100px;
+
+}
+
+.header h1{
+
+    margin-top: 18px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    color: #555;
+    text-align: center;
+
+}
+
+.form-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-section h1 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+    font-size:18px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="date"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input[type="date"],
+.form-group input[type="number"]{
+    width: 30%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+
+}
+
+.form-group input[type="text"] {
+    margin-bottom: 10px;
+}
+
+.form-group select {
+    margin-top: 5px;
+}
+h1{
+
+        margin-top: 18px;
+        margin-bottom: 15px;
+        font-size: 28px;
+        color: #555;
+        text-align: center;
+
+}
+h2 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-size: 23px;
+    color: #d9d9d9;
+    text-align: center;
+}
+h3{
+    margin-top: 18px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+.asset-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.asset-table th, .asset-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.asset-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+/* 
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+}
+
+.status.good {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status.bad {
+    background-color: #f8d7da;
+    color: #721c24;
+} */
+
+
+.btn-icon {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 5px;
+}
+
+.btn-icon:hover {
+    color: #007bff;
+}
+
+
+.btn {
+    margin-right: 15px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #D1495B;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 22px;
+}
+
+.btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.4em;
+    margin: 0 2px;
+}
+
+.btn-edit:hover, .btn-delete:hover {
+    opacity: 0.7;
+}
+
+.btn-edit {
+    color: #408cdd;
+}
+
+.btn-delete {
+    color: #c94c59;
+}
+
+
+.dashboard-summary {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.total-assets {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.total-assets h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.total-assets p {
+    font-size: 2em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.dashboard-chart {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Container to align the circles in a single row */
+#assetCountsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the circles */
+    margin-top: 20px;
+
+  }
+  
+  /* Styling for the circles */
+  .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling for individual asset types */
+  .total-assets-count {
+    background-color: #4CAF50; /* Green for total assets */
+  }
+  
+  .furniture-count {
+    background-color: #D1495B; /* Red for furniture */
+  }
+  
+  .vehicle-count {
+    background-color: #30638E; /* Blue for vehicles */
+  }
+  
+  .office-equipment-count {
+    background-color: #EDAE49; /* Yellow for office equipment */
+  }
+ 
+  .other-count {
+    background-color: #00798C; /*Teal for other assests*/
+  }
+  .total-price{
+    background-color: #9C27B0; /* Purple for other assets */
+
+
+  }
+
+  .chart-container {
+    width: 100%;
+    margin: 0 auto;
+
+  }
+
+  #assetChart {
+    max-width: 100%;
+    height: 750px;
+    padding: 65px;
+  }
+   .header .h1{
+    text-align: center;
+   }
+
+
+/* Common styles for all input modals */
+[id^="inputModal-"],  [id^="totalPriceModal-"]{
+    display: none; /* Will be overridden inline when shown */
+    position: fixed; /* Changed from absolute to fixed for better positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f2f0efef;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    z-index: 1000;
+}
+
+/* Asset-specific styles */
+#inputModal-furniture {
+    border: 2px solid #4CAF50; /* Green for furniture */
+}
+
+#inputModal-vehicle {
+    border: 2px solid #2196F3; /* Blue for vehicles */
+}
+
+#inputModal-office_equipment {
+    border: 2px solid #FFC107; /* Yellow for office equipment */
+}
+
+#inputModal-other {
+    border: 2px solid #9C27B0; /* Purple for other assets */
+}
+
+/* Styles for modal content */
+.modal-content {
+    text-align: center;
+}
+
+[id^="pdfFileName-"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+[id^="savePdfBtn-"], [id^="cancelBtn-"] {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+[id^="savePdfBtn-"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+[id^="cancelBtn-"] {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* Search and sort container */
+.search-sort-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.search-sort-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex: 1;
+}
+
+.export-right {
+    margin-left: auto;
+}
+
+/* Input and select styles */
+#searchInput-furniture,
+#searchColumn-furniture,
+#sortSelect-furniture,#searchInput-vehicle,
+#searchColumn-vehicle,
+#sortSelect-vehicle,#searchInput-office_equipment,
+#searchColumn-office_equipment,
+#sortSelect-office_equipment,#searchInput-other,
+#searchColumn-other,
+#sortSelect-other{
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    min-width: 150px;
+}
+
+#searchInput-furniture:focus,
+#searchColumn-furniture:focus,
+#sortSelect-furniture:focus,#searchInput-vehicle:focus,
+#searchColumn-vehicle:focus,
+#sortSelect-vehicle:focus,#searchInput-office_equipment:focus,
+#searchColumn-office_equipment:focus,
+#sortSelect-office_equipment:focus,#searchInput-other:focus,
+#searchColumn-other:focus,
+#sortSelect-other:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Button styles */
+#sortOrderBtn-furniture,
+#exportPdfBtn-furniture,#sortOrderBtn-vehicle,
+#exportPdfBtn-vehicle,#sortOrderBtn-office_equipment,
+#exportPdfBtn-office_equipment,#sortOrderBtn-other,
+#exportPdfBtn-other {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#sortOrderBtn-furniture,#sortOrderBtn-vehicle,#sortOrderBtn-office_equipment,
+#sortOrderBtn-other {
+    background-color: #f39c12;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sortOrderBtn-furniture:hover,#sortOrderBtn-vehicle:hover,
+#sortOrderBtn-office_equipment:hover, #sortOrderBtn-other:hover  {
+    background-color: #e67e22;
+}
+
+#exportPdfBtn-furniture,#exportPdfBtn-vehicle,#exportPdfBtn-office_equipment,
+#exportPdfBtn-other {
+    background-color: #30648eea;
+    color: white;
+    padding: 12px 24px;
+}
+
+#exportPdfBtn-furniture:hover,#exportPdfBtn-vehicle:hover,#exportPdfBtn-office_equipment:hover,
+#exportPdfBtn-other:hover {
+    background-color: #30638E;
+}
+
+#exportPdfBtn-furniture i,#exportPdfBtn-office_equipment i,#exportPdfBtn-vehicle i,
+#exportPdfBtn-other i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+
+
+/* Modal Content Styling for Overlay Modals */
+#totalPriceModal-furniture {
+    border: 2px solid #4CAF50; /* Matching green color for consistency */
+}
+
+#totalPriceModal-vehicle {
+    border: 2px solid #2196F3; /* Matching green color for consistency */
+}
+
+#totalPriceModal-office_equipment {
+    border: 2px solid #FFC107; /* Yellow for office equipment */
+    ; /* Matching green color for consistency */
+}
+
+#totalPriceModal-other {
+    border: 2px solid #9C27B0; /* Purple for other assets */
+    ; /* Matching green color for consistency */
+}
+
+.total-price-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.total-price-options button {
+    flex: 1;
+    margin: 0 5px;
+}
+
+#totalPriceResult {
+    margin-top: 20px;
+}
+
+/* Close Button Styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .search-sort-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-sort-left {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-sort-container > *,
+    .search-sort-left > * {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    
+    .export-right {
+        margin-left: 0;
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    #exportPdfBtn {
+        width: 100%;
+        justify-content: center;
+    }
+}

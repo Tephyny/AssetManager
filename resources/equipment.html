@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Equipment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="js/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/jspdf.umd.min.js"></script>
+    <script src="js/jspdf.plugin.autotable.min.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Assetz Tracker</h2>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="furniture.html"><i class="fas fa-chair"></i> Furniture</a></li>
+                <li><a href="vehicles.html"><i class="fas fa-car"></i> Vehicles</a></li>
+                <li><a href="equipment.html"><i class="fas fa-desktop"></i> Office Equipment</a></li>
+                <li><a href="otherassets.html"><i class="fas fa-cubes"></i> Other Assets</a></li>
+                <li><a href="station.html"><i class="fas fa-location-arrow"></i> Stations</a></li>
+                <li><a href="help.html"><i class="fas fa-question-circle"></i> Help</a></li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <header class="header">
+                <h1>Office Equipments Entry</h1>
+                
+                
+            </header>
+
+            <section class="form-section">
+                <h1>Add Office Equipment</h1>
+                <form id="officeEquipmentForm">
+                    <div class="form-group">
+                        <label for="equip-type">Equipment Type *</label>
+                        <input type="text" id="office_equipment-type" placeholder="Eg., Laptop, Desktop, TV etc">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="equip-name">Equipment Name *</label>
+                        <input type="text" id="office_equipment-name" placeholder="Eg., Hp ProBook 640 G4, Desktop-u87p0ra...">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="equip-number">Equipment Number *</label>
+                        <input type="text" id="office_equipment-number" placeholder="Eg., PROP/ 032">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="equip-price">Equipment Price</label>
+                        <input type="text" id="office_equipment-price" placeholder="300000">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="equip-quantity">Quantity</label>
+                        <input type="number" id="office_equipment-quantity">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="equip-station">Station *</label>
+                        <select id="office_equipment-station_id" class="station-dropdown" required>
+                            <option value="">Select a station</option>
+                            <!-- Options will be populated dynamically -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="officeEquipment-date">Date of Purchase</label>
+                        <input type="date" id="office_equipment-purchase_date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="equip-condition">Condition</label>
+                        <select id="office_equipment-condition">
+                            <option value="Good">Good</option>
+                            <option value="Bad">Bad</option>
+                        </select>
+                    </div>
+
+                    <h1>Asset Holder</h1>
+
+                    <div class="form-group">
+                        <label for="equip-employee-name">Employee Name</label>
+                        <input type="text" id="office_equipment-employee_name" placeholder="Full Name">
+                        
+                <button type="submit" class="btn">Save Equipment</button>   
+                <button class="btn" onclick="window.location.href='view-equipment.html'">View Equipment</button>
+                    
+                </form>
+            </section>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>

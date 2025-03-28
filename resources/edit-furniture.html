@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Furniture</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="js/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/jspdf.umd.min.js"></script>
+    <script src="js/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Assetz Tracker</h2>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="furniture.html"><i class="fas fa-chair"></i> Furniture</a></li>
+                <li><a href="vehicles.html"><i class="fas fa-car"></i> Vehicles</a></li>
+                <li><a href="equipment.html"><i class="fas fa-desktop"></i> Office Equipment</a></li>
+                <li><a href="otherassets.html"><i class="fas fa-cubes"></i> Other Assets</a></li>
+                <li><a href="station.html"><i class="fas fa-location-arrow"></i> Stations</a></li>
+                <li><a href="view-furniture.html"><i class='fas fa-arrow-left' ></i>Back</a></li>
+
+            </ul>
+        </aside>
+        
+        <div class="main-content">
+            <header class="header">
+                <h1>Edit Asset</h1>
+            </header>
+
+            <form id="editFurnitureForm">
+                <!-- Same form fields as in index.html, but with id prefix changed to "edit-" -->
+                <!-- For example: -->
+                <div class="form-group">
+                    <label for="edit-furniture-type">Furniture Type *</label>
+                    <input type="text" id="edit-furniture-type" required>
+                </div>
+                <div class="form-group">
+                    <label for="furniture-number">Furniture Number *</label>
+                    <input type="text" id="edit-furniture-number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="furniture-price">Furniture Price</label>
+                    <input type="text" id="edit-furniture-price">
+                </div>
+
+                <div class="form-group">
+                    <label for="furniture-quantity">Quantity</label>
+                    <input type="number" id="edit-furniture-quantity">
+                </div>
+            
+                <div class="form-group">
+                    <label for="furniture-station_id">Station *</label>
+                    <select id="edit-furniture-station_id" class="station-dropdown" required>
+                        <option value="">Select a station</option>
+                        <!-- Options will be populated dynamically -->
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="furniture-purchase_date">Date of Purchase</label>
+                    <input type="date" id="edit-furniture-purchase_date">
+                </div>
+
+                <div class="form-group">
+                    <label for="edit-furniture-condition">Condition</label>
+                    <select id="edit-furniture-condition">
+                        <option value="Good" id="edit-furniture-condition">Good</option>
+                        <option value="Bad" id="edit-furniture-condition">Bad</option>
+                    </select>
+                </div>
+
+                <h1>Asset Holder</h1>
+
+                <div class="form-group">
+                    <label for="edit-furniture-employee_name">Employee Name</label>
+                    <input type="text" id="edit-furniture-employee_name">
+                </div>
+                <button type="submit" class="btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- <script src="edit-furniture.js"></script> -->
+     <script src="renderer.js"></script>
+</body>
+</html>

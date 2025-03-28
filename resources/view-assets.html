@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Assets</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="js/toastify.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/jspdf.umd.min.js"></script>
+    <script src="js/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Assetz Tracker</h2>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="furniture.html"><i class="fas fa-chair"></i> Furniture</a></li>
+                <li><a href="vehicles.html"><i class="fas fa-car"></i> Vehicles</a></li>
+                <li><a href="equipment.html"><i class="fas fa-desktop"></i> Office Equipment</a></li>
+                <li><a href="otherassets.html"><i class="fas fa-cubes"></i> Other Assets</a></li>
+                <li><a href="help.html"><i class="fas fa-question-circle"></i> Help</a></li><br><br>
+                <li><a href="otherassets.html"><i class='fas fa-arrow-left' ></i>Back</a></li>
+
+            </ul>
+        </aside>
+        
+        <div class="main-content">
+            <header class="header">
+                <h1>Other Asset Records</h1>
+            </header>
+            <div class="search-sort-container">
+                <div class="search-sort-left">
+                    <input type="text" id="searchInput-other" placeholder="Search...">
+                    <select id="searchColumn-other">
+                        <option value="all">All Columns</option>
+                        <option value="type">Type</option>
+                        <option value="number">Number</option>
+                        <option value="price">Price</option>
+                        <option value="station_name">Station</option>
+                        <option value="purchase_date">Purchase Date</option>
+                        <option value="condition">Condition</option>
+                        <option value="employee_name">Employee Name</option>
+                    </select>
+                    <select id="sortSelect-other">
+                        <option value="employee_name">Sort by Name</option>
+                        <option value="number">Sort by Number</option>
+                        <option value="price">Sort by Price</option>
+                        <option value="purchase_date">Sort by Date</option>
+                    </select>
+                    <button id="sortOrderBtn-other">↑</button>
+                </div>
+
+                <div class="export-right" >
+                    <button id="exportPdfBtn-other" class="btn"><i class="fas fa-print"></i> Export Pdf</button>
+                    <button id="showTotalPriceBtn-other" class="btn"><i class="fas fa-calculator"></i> Show Total Price</button>
+
+                </div>
+            </div>
+
+            <div id="otherList" class="asset-table"></div>
+        </div>
+    </div>
+
+    <div id="inputModal-other" style="display: none;">
+        <div>
+            <h3>Enter PDF File Name</h3>
+            <input type="text" id="pdfFileName-other" placeholder="Other Assets.pdf" required>
+            <button id="savePdfBtn-other" class="btn">Save</button>
+            <button id="cancelBtn-other" class="btn">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Total Price Modal -->
+    <div id="totalPriceModal-other" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Prices Related To Other Assets</h3>
+            <div class="total-price-options">
+                <button id="totalPriceAll-other" class="btn">Other Assets</button>
+                <button id="totalPriceByStation-other" class="btn">By Station</button>
+                <button id="totalPriceByCondition-other" class="btn">By Condition</button>
+            </div>
+            <div id="totalPriceResult-other"></div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

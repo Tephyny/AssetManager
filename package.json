@@ -1,0 +1,60 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "productName": "AssetManager",
+  "description": "App for managing assets",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64"
+  },
+  "author": {
+    "name": "Stephanie Shawa",
+    "email": "sshawa48@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.4.4",
+    "electron-is-dev": "^3.0.1",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.3",
+    "knex": "^3.1.0",
+    "sqlite3": "^5.0.0",
+    "toastify-js": "^1.12.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.2",
+    "electron-builder": "^24.13.3"
+  },
+  "homepage": "https://github.com/Tephyny/Assets",
+  "build": {
+    "asar": true,
+    "asarUnpack": [
+      "database.sqlite"
+    ],
+    "appId": "com.yourcompany.assets",
+    "productName": "UAS Assets",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        "portable"
+      ],
+      "icon": "build/desk.ico"
+    },
+    "files": [
+      "main.js",
+      "database.sqlite",
+      "package.json",
+      "resources/**/*",
+      "build/**/*"
+    ]
+  }
+}
